@@ -18,4 +18,10 @@ export const globalip = functions
     res.send(ip)
   })
 
+export const wall = functions
+  .region('asia-northeast1')
+  .https.onRequest((req, res) => {
+    res.send(req.query.text).end()
+  })
+
 export { manifest }

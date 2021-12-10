@@ -32,9 +32,3 @@ export const manifest = functions
     }
     res.json(genManifest(o)).end()
   })
-
-export const wall = functions
-  .region('asia-northeast1')
-  .https.onRequest((req, res) => {
-    res.send(req.query.text).end()
-  })
