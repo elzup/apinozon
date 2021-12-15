@@ -1,34 +1,32 @@
+import { https } from './firebase'
 /* eslint-disable @typescript-eslint/naming-convention */
-import * as functions from 'firebase-functions'
 
-const genManifest = ({
-  name,
-  short_name,
-  src,
-  start_url = '/',
-}: Record<string, string>) => ({
-  name,
-  short_name,
-  start_url,
+const genManifest = (m: Map<string, string>) => ({
+  name: m.get('name'),
+  short_name: m.get('short_name'),
+  start_url: m.get('start_url'),
   display: 'standalone',
   theme_color: '#ffffff',
   background_color: '#ffffff',
   icons: [
     {
-      src,
+      src: m.get('name'),
       sizes: '512x512',
       type: 'image/png',
     },
   ],
 })
 
-export const manifest = functions
-  .region('asia-northeast1')
-  .https.onRequest((req, res) => {
-    const o: Record<string, string> = {}
+export const manifest = https.onRequest((req, res) => {
+  const m: Map<string, string> = new Map([
+    ['name', 'name'],
+    ['short_name', 'name'],
+    ['start_url', '/'],
+    ['src', 'icon.png'],
+  ])
 
-    for (const [k, v] of Object.entries(req.query)) {
-      o[k] = v as string
-    }
-    res.json(genManifest(o)).end()
-  })
+  for (const [k, v] of Object.entries(req.query)) {
+    if (typeof v === 'string') m.set(k, v)
+  }
+  res.json(genManifest(m)).end()
+})

@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['nzap', 'nzap/typescript'],
+  extends: ['nzap', 'nzap/typescript', 'nzap/jest'],
   env: {
     es6: true,
     node: true,
