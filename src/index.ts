@@ -1,6 +1,9 @@
 import * as functions from 'firebase-functions'
-import { https } from './firebase'
 import { manifest } from './dynamicPwa'
+import { fanOut, fanOutUnit } from './fanOut'
+import { https } from './firebase'
+
+export { manifest, fanOut, fanOutUnit }
 
 const { info } = functions.logger
 
@@ -14,9 +17,3 @@ export const globalip = https.onRequest((req, res) => {
 
   res.send(ip)
 })
-
-export const wall = https.onRequest((req, res) => {
-  res.send(req.query.text).end()
-})
-
-export { manifest }
