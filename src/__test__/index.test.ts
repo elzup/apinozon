@@ -1,7 +1,8 @@
 import * as functions from 'firebase-functions'
 import { mockReq, mockRes } from 'sinon-express-mock'
-import { manifest } from './dynamicPwa'
-import { helloWorld } from './index'
+import { manifest } from '../dynamicPwa'
+import { helloWorld } from '../index'
+import { yamabiko } from '../yamabiko'
 
 test('hello world', async () => {
   const req = {} as functions.Request
@@ -14,6 +15,14 @@ test('hello world', async () => {
   await helloWorld(req, res)
 })
 
+test('yamabiko', async () => {
+  const req = mockReq({ body: 'toshino' })
+  const res = mockRes()
+
+  await yamabiko(req, res)
+
+  expect(res.send.getCalls()[0].args[0]).toMatch(`toshino`)
+})
 test('manifest', async () => {
   const req = mockReq({
     query: {
