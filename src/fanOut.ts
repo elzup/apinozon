@@ -13,7 +13,7 @@ export const fanOut = https.onRequest(async (req, res) => {
   const [topic] = await pubsub.createTopic('fanout-unit')
 
   for (let i = 1; i <= 3; i++) {
-    topic.publishMessage({
+    await topic.publishMessage({
       json: {
         count: i,
       },
