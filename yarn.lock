@@ -2404,7 +2404,7 @@ find-up@^4.0.0, find-up@^4.1.0:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
 
-firebase-admin@^9.8.0:
+firebase-admin@9.12.0:
   version "9.12.0"
   resolved "https://registry.yarnpkg.com/firebase-admin/-/firebase-admin-9.12.0.tgz#d7e889e97c9c31610efbcd131bb6d06a783af757"
   integrity sha512-AtA7OH5RbIFGoc0gZOQgaYC6cdjdhZv4w3XgWoupkPKO1HY+0GzixOuXDa75kFeoVyhIyo4PkLg/GAC1dC1P6w==
@@ -2420,7 +2420,7 @@ firebase-admin@^9.8.0:
     "@google-cloud/firestore" "^4.5.0"
     "@google-cloud/storage" "^5.3.0"
 
-firebase-functions-test@^0.3.3:
+firebase-functions-test@0.3.3:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/firebase-functions-test/-/firebase-functions-test-0.3.3.tgz#d26626d6c3edb03cd27eb79c12980c2551722517"
   integrity sha512-dCppF/2Ztv87IyyBaUQlT1Z05ial5v/3LB0huS2ktXz05yNiID5FVIKtO0/+w9Q7/SThJ8qIDG0hoGDPt4Xcug==
@@ -2428,7 +2428,7 @@ firebase-functions-test@^0.3.3:
     "@types/lodash" "^4.14.104"
     lodash "^4.17.5"
 
-firebase-functions@^3.14.1:
+firebase-functions@3.15.7:
   version "3.15.7"
   resolved "https://registry.yarnpkg.com/firebase-functions/-/firebase-functions-3.15.7.tgz#ac88657e7e28f5a5926d41ae3e8fae9c94621ccd"
   integrity sha512-ZD7r8eoWWebgs+mTqfH8NLUT2C0f7/cyAvIA1RSUdBVQZN7MBBt3oSlN/rL3e+m6tdlJz6YbQ3hrOKOGjOVYvQ==
@@ -3433,7 +3433,7 @@ jest-worker@^27.4.5:
     merge-stream "^2.0.0"
     supports-color "^8.0.0"
 
-jest@^27.4.5:
+jest@27.4.5:
   version "27.4.5"
   resolved "https://registry.yarnpkg.com/jest/-/jest-27.4.5.tgz#66e45acba44137fac26be9d3cc5bb031e136dc0f"
   integrity sha512-uT5MiVN3Jppt314kidCk47MYIRilJjA/l2mxwiuzzxGUeJIvA8/pDaJOAX5KWvjAo7SCydcW0/4WEtgbLMiJkg==
@@ -4204,7 +4204,7 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@^2.4.1:
+prettier@2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.4.1.tgz#671e11c89c14a4cfc876ce564106c4a6726c9f5c"
   integrity sha512-9fbDAXSBcc6Bs1mZrDYb3XKzDLm4EXXL9sC1LqKP5rZkT6KRr/rf9amVUcODVXgguK/isJz0d0hP72WeaKWsvA==
@@ -4546,12 +4546,12 @@ signal-exit@^3.0.3:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.6.tgz#24e630c4b0f03fea446a2bd299e62b4a6ca8d0af"
   integrity sha512-sDl4qMFpijcGw22U5w63KmD3cZJfBuFlVNbVMKje2keoKML7X2UzWbc4XrmEbDwg0NXJc3yv4/ox7b+JWb57kQ==
 
-sinon-express-mock@^2.2.1:
+sinon-express-mock@2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/sinon-express-mock/-/sinon-express-mock-2.2.1.tgz#245646f06710efd98134dbe15b3fd153ebb0e67e"
   integrity sha512-z1wqaPMwEnfn0SpigFhVYVS/ObX1tkqyRzRdccX99FgQaLkxGSo4684unr3NCqWeYZ1zchxPw7oFIDfzg1cAjg==
 
-sinon@^12.0.1:
+sinon@12.0.1:
   version "12.0.1"
   resolved "https://registry.yarnpkg.com/sinon/-/sinon-12.0.1.tgz#331eef87298752e1b88a662b699f98e403c859e9"
   integrity sha512-iGu29Xhym33ydkAT+aNQFBINakjq69kKO6ByPvTsm3yyIACfyQttRTP03aBP/I8GfhFmLzrnKwNNkr0ORb1udg==
@@ -4857,7 +4857,7 @@ tr46@~0.0.3:
   resolved "https://registry.yarnpkg.com/tr46/-/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
   integrity sha1-gYT9NH2snNwYWZLzpmIuFLnZq2o=
 
-ts-jest@^27.1.1:
+ts-jest@27.1.1:
   version "27.1.1"
   resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-27.1.1.tgz#5a54aca96db1dac37c681f3029dd10f3a8c36192"
   integrity sha512-Ds0VkB+cB+8g2JUmP/GKWndeZcCKrbe6jzolGrVWdqVUFByY/2KDHqxJ7yBSon7hDB1TA4PXxjfZ+JjzJisvgA==
@@ -4942,7 +4942,7 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typescript@^3.8.0:
+typescript@3.9.10:
   version "3.9.10"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.10.tgz#70f3910ac7a51ed6bef79da7800690b19bf778b8"
   integrity sha512-w6fIxVE/H1PkLKcCPsFqKE7Kv7QUwhU8qQY2MueZXWx5cPZdwFupLgKK3vntcK98BtNHZtAF4LA/yl2a7k8R6Q==
