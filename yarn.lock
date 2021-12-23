@@ -1947,17 +1947,10 @@ escodegen@^2.0.0:
   optionalDependencies:
     source-map "~0.6.1"
 
-<<<<<<< HEAD
-eslint-config-nzap@4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-nzap/-/eslint-config-nzap-4.4.0.tgz#b4d68988197d273d5f258b09c7125404745b106d"
-  integrity sha512-rJ5F0EZTS/lef+Tr+oVGJKmQo29uEV/zx6h4LuOI2pHcSshWmR8aPMxbecVPcHMaUChb7toDXV34FWAIxcUVxQ==
-=======
 eslint-config-nzap@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/eslint-config-nzap/-/eslint-config-nzap-5.0.0.tgz#32cb925bc304bdc038bec586c25cbe42d2b6ef72"
   integrity sha512-N7xnLlTnXzGx7/B3VL1nCAa4boerjPAdBjXnUaZDOUJlgA+8WF4estceCyqWOXC+0MLXNqoAOh491yZnNPxoUw==
->>>>>>> 0c6b6f2... fix conf
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.3.1"
     "@typescript-eslint/parser" "^5.3.1"
@@ -2076,12 +2069,6 @@ eslint-visitor-keys@^2.0.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-2.1.0.tgz#f65328259305927392c938ed44eb0a5c9b2bd303"
   integrity sha512-0rSmRBzXgDzIsD6mGdJgevzgezI534Cer5L/vyMX0kHzT/jiB43jRhd9YUlMGYLQy2zprNmoT8qasCGtY+QaKw==
 
-<<<<<<< HEAD
-eslint@7.32.0:
-  version "7.32.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.32.0.tgz#c6d328a14be3fb08c8d1d21e12c02fdb7a2a812d"
-  integrity sha512-VHZ8gX+EDfz+97jGcgyGCyRia/dPOd6Xh9yPv8Bl1+SoaIwD+a/vlrOmGRUyOYu7MwUhc7CxqeaDZU13S4+EpA==
-=======
 eslint-visitor-keys@^3.0.0, eslint-visitor-keys@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-3.1.0.tgz#eee4acea891814cda67a7d8812d9647dd0179af2"
@@ -2091,7 +2078,6 @@ eslint@^8.5.0:
   version "8.5.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-8.5.0.tgz#ddd2c1afd8f412036f87ae2a063d2aa296d3175f"
   integrity sha512-tVGSkgNbOfiHyVte8bCM8OmX+xG9PzVG/B4UCF60zx7j61WIVY/AqJECDgpLD4DbbESD0e174gOg3ZlrX15GDg==
->>>>>>> 0c6b6f2... fix conf
   dependencies:
     "@eslint/eslintrc" "^1.0.5"
     "@humanwhocodes/config-array" "^0.9.2"
@@ -2386,11 +2372,7 @@ firebase-functions-test@0.3.3:
     "@types/lodash" "^4.14.104"
     lodash "^4.17.5"
 
-<<<<<<< HEAD
-firebase-functions@3.16.0:
-=======
 firebase-functions@^3.14.1:
->>>>>>> 0c6b6f2... fix conf
   version "3.16.0"
   resolved "https://registry.yarnpkg.com/firebase-functions/-/firebase-functions-3.16.0.tgz#603e47c2a563a5d0d1bc28f7362d0349c2f0d33f"
   integrity sha512-6ISOn0JckMtpA3aJ/+wCCGhThUhBUrpZD+tSkUeolx0Vr+NoYFXA0+2YzJZa/A2MDU8gotPzUtnauLSEQvfClQ==
