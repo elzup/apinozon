@@ -1,6 +1,6 @@
 {
   "functions": {
     "predeploy": ["yarn build"],
-    "source": "functions"
+    "source": "."
   }
 }
