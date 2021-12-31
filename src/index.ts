@@ -2,8 +2,9 @@ import * as functions from 'firebase-functions'
 import { manifest } from './dynamicPwa'
 import { fanOut, fanOutUnit } from './fanOut'
 import { https } from './firebase'
+import { timezoneJp, timezoneUs } from './timezone'
 
-export { manifest, fanOut, fanOutUnit }
+export { manifest, fanOut, fanOutUnit, timezoneJp, timezoneUs }
 
 const { info } = functions.logger
 
