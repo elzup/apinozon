@@ -1,18 +1,18 @@
 import { PubSub } from '@google-cloud/pubsub'
 import { base, https } from './firebase'
 
-const projectId = JSON.parse(process.env.FIREBASE_CONFIG || '{}').projectId
-const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
+// const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 const FANOUT_UNIT_TOPIC_ID = 'fanout-unit'
 
-export const fanOut = https.onRequest(async (req, res) => {
-  console.log('started')
-  console.log(projectId)
-
+const getTopic = async () => {
+  const projectId = JSON.parse(process.env.FIREBASE_CONFIG || '{}').projectId
   const pubsub = new PubSub({ projectId })
 
-  // Creates a new topic
-  const [topic] = await pubsub.createTopic(FANOUT_UNIT_TOPIC_ID)
+  return await pubsub.topic(FANOUT_UNIT_TOPIC_ID)
+}
+
+export const fanOut = https.onRequest(async (req, res) => {
+  const topic = await getTopic()
 
   for (let i = 1; i <= 3; i++) {
     console.log(`step ${i}`)
