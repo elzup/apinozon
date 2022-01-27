@@ -18,3 +18,7 @@ export const globalip = https.onRequest((req, res) => {
 
   res.send(ip)
 })
+
+export const unsafe = https.onRequest((req, res) => {
+  res.send(`<h1>hello :)</h1><p>only http page</p>`)
+})
