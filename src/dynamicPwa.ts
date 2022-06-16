@@ -1,4 +1,5 @@
 import { https } from './firebase'
+
 /* eslint-disable @typescript-eslint/naming-convention */
 
 const genManifest = (m: Map<string, string>) => ({
