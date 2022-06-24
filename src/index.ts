@@ -1,15 +1,17 @@
 import * as functions from 'firebase-functions'
+import { ua } from './ua'
 import { manifest } from './dynamicPwa'
 import { fanOut, fanOutUnit } from './fanOut'
 import { https } from './firebase'
 import { timezoneJp, timezoneUs } from './timezone'
 
-export { manifest, fanOut, fanOutUnit, timezoneJp, timezoneUs }
+export { manifest, fanOut, fanOutUnit, timezoneJp, timezoneUs, ua }
 
 const { info } = functions.logger
 
 export const helloWorld = https.onRequest((req, res) => {
   info('Hello logs!', { structuredData: true })
+
   res.send('anozon hello')
 })
 

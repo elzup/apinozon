@@ -1,11 +1,17 @@
-import { sha512Hex } from '@elzup/kit'
 import { baseTokyo } from './firebase'
 import { insert } from './notion'
+import { sha512Hex } from './util'
 
 const SALT = process.env.SECRET_KEY_ALT ?? ''
 
+console.log(SALT)
+
 const hashAuth = (id: string, token: string) => {
-  return sha512Hex(id + SALT).substring(30) === token
+  console.log(id + SALT)
+  console.log(sha512Hex(id + SALT).substring(0, 20))
+  console.log(token)
+  // eslint-disable-next-line @typescript-eslint/prefer-string-starts-ends-with
+  return sha512Hex(id + SALT).substring(0, 20) === token
 }
 
 // type UsRequest = {
@@ -16,16 +22,18 @@ const hashAuth = (id: string, token: string) => {
 // } & Request
 
 export const ua = baseTokyo.https.onRequest((req, res) => {
-  const { ['user-agent']: userAgent, authorization: token } = req.headers
+  const { ['user-agent']: userAgent, ['authorization']: token } = req.headers
 
-  if (token === null || token === undefined || userAgent === undefined) {
-    res.status(400).send({ message: 'need id, channel, token' }).end()
+  if (token === undefined || userAgent === undefined) {
+    res.status(400).send({ message: 'need token' }).end()
     return
   }
   const [, id, hs] = token.split('-')
 
+  console.log({ id, hs })
+
   if (!hashAuth(id, hs)) {
-    res.status(401).send({ message: 'need token' }).end()
+    res.status(401).send({ message: 'auth failed' }).end()
   }
   insert(id, userAgent)
 
