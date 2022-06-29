@@ -21,7 +21,7 @@ const hashAuth = (id: string, token: string) => {
 //   }
 // } & Request
 
-export const ua = baseTokyo.https.onRequest((req, res) => {
+export const ua = baseTokyo.https.onRequest(async (req, res) => {
   const { ['user-agent']: userAgent, ['authorization']: token } = req.headers
 
   if (token === undefined || userAgent === undefined) {
@@ -30,12 +30,10 @@ export const ua = baseTokyo.https.onRequest((req, res) => {
   }
   const [, id, hs] = token.split('-')
 
-  console.log({ id, hs })
-
   if (!hashAuth(id, hs)) {
     res.status(401).send({ message: 'auth failed' }).end()
   }
-  insert(id, userAgent)
+  await insert(id, userAgent, [])
 
   res.send(`ok! ${id} got ${userAgent}`)
 })
