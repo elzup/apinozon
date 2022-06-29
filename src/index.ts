@@ -16,7 +16,7 @@ export const helloWorld = https.onRequest((req, res) => {
 })
 
 export const globalip = https.onRequest((req, res) => {
-  const ip = req.header('fastly-client-ip')
+  const ip = req.headers['x-forwarded-for']
 
   res.send(ip)
 })
