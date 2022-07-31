@@ -284,10 +284,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@elzup/kit@^3.2.2":
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/@elzup/kit/-/kit-3.4.1.tgz#743c8211872f1f7741cb12e734716e79701ece5d"
-  integrity sha512-/E7H2v2dWVl4Jk2In37kxHZNfbg/ZSzhPNrsFTMaf3H0Xj9mSq4cWdHrHDFSJuy+3SO0e1R1o6Uavlg/EVdARA==
+"@elzup/kit@3.5.3":
+  version "3.5.3"
+  resolved "https://registry.yarnpkg.com/@elzup/kit/-/kit-3.5.3.tgz#2c42a137c5add787c620fab76871dff74dedd5fb"
+  integrity sha512-uc8bq9OkKkd80tChUAsuMLmk8jkfg0Z3TtvWKgVVMDTQEv6zOQ0226aTrmYbRUZSrTnNa1W5SvuFFCNL4KZO7g==
 
 "@eslint/eslintrc@^1.2.2":
   version "1.3.0"
