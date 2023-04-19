@@ -1,17 +1,9 @@
-import * as functions from 'firebase-functions'
+import { formatTime } from '@elzup/kit/lib/formatTime'
 import { manifest } from './dynamicPwa'
 import { fanOut, fanOutUnit } from './fanOut'
-import { https, baseTokyo, baseUs } from './firebase'
-import { formatTime } from '@elzup/kit/lib/formatTime'
+import { baseTokyo, baseUs } from './firebase'
 
 export { manifest, fanOut, fanOutUnit }
-
-const { info } = functions.logger
-
-export const helloWorld = https.onRequest((req, res) => {
-  info('Hello logs!', { structuredData: true })
-  res.send('anozon hello')
-})
 
 export const timezoneUs = baseUs.https.onRequest((req, res) => {
   const datejp = new Date(

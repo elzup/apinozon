@@ -4,8 +4,6 @@ import { sha512Hex } from './util'
 
 const SALT = process.env.SECRET_KEY_ALT ?? ''
 
-console.log(SALT)
-
 const hashAuth = (id: string, token: string) => {
   // console.log(id + SALT)
   // console.log(sha512Hex(id + SALT).substring(0, 20))
