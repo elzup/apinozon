@@ -39,17 +39,17 @@ test('manifest', async () => {
   expect(toj(res.json.getCalls()[0].args)).toMatchInlineSnapshot(`
     "[
     	{
-    		\\"name\\": \\"Hogera\\",
-    		\\"short_name\\": \\"Hoge\\",
-    		\\"start_url\\": \\"/fuga\\",
-    		\\"display\\": \\"standalone\\",
-    		\\"theme_color\\": \\"#ffffff\\",
-    		\\"background_color\\": \\"#ffffff\\",
-    		\\"icons\\": [
+    		"name": "Hogera",
+    		"short_name": "Hoge",
+    		"start_url": "/fuga",
+    		"display": "standalone",
+    		"theme_color": "#ffffff",
+    		"background_color": "#ffffff",
+    		"icons": [
     			{
-    				\\"src\\": \\"Hogera\\",
-    				\\"sizes\\": \\"512x512\\",
-    				\\"type\\": \\"image/png\\"
+    				"src": "Hogera",
+    				"sizes": "512x512",
+    				"type": "image/png"
     			}
     		]
     	}
