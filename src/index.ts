@@ -4,6 +4,7 @@ import { manifest } from './dynamicPwa.js'
 import { fanOut, fanOutUnit } from './fanOut.js'
 import { https } from './firebase.js'
 import { timezoneJp, timezoneUs } from './timezone.js'
+import { timeGaha } from './gacha.js'
 
 export { manifest, fanOut, fanOutUnit, timezoneJp, timezoneUs, ua }
 
@@ -23,4 +24,11 @@ export const globalip = https.onRequest((req, res) => {
 
 export const unsafe = https.onRequest((req, res) => {
   res.send(`<h1>hello :)</h1><p>only http page</p>`)
+})
+
+export const timeGacha = https.onRequest((req, res) => {
+  const t = Date.now()
+  res.setHeader('Time-Gacha', +t)
+
+  res.send(timeGaha(new Date(t)))
 })
