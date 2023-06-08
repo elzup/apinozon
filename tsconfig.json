@@ -3,7 +3,7 @@
     "module": "ESNext",
     "noImplicitReturns": true,
     "noUnusedLocals": true,
-    "moduleResolution": "nodenext",
+    "moduleResolution": "bundler",
     "allowJs": true,
     "outDir": "lib",
     "sourceMap": true,
