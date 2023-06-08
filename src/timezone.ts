@@ -1,7 +1,8 @@
-import { formatTime } from '@elzup/kit/lib/formatTime'
-import { manifest } from './dynamicPwa'
-import { fanOut, fanOutUnit } from './fanOut'
-import { baseTokyo, baseUs } from './firebase'
+// eslint-disable-next-line import/extensions
+import { formatTime } from '@elzup/kit/lib/formatTime.js'
+import { manifest } from './dynamicPwa.js'
+import { fanOut, fanOutUnit } from './fanOut.js'
+import { baseTokyo, baseUs } from './firebase.js'
 
 export { manifest, fanOut, fanOutUnit }
 

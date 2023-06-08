@@ -1,6 +1,6 @@
-import { baseTokyo } from './firebase'
-import { insert } from './notion'
-import { sha512Hex } from './util'
+import { baseTokyo } from './firebase.js'
+import { insert } from './notion.js'
+import { sha512Hex } from './util.js'
 
 const SALT = process.env.SECRET_KEY_ALT ?? ''
 

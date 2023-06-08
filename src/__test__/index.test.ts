@@ -1,7 +1,7 @@
 import { mockReq, mockRes } from 'sinon-express-mock'
-import { manifest } from '../dynamicPwa'
-import { helloWorld } from '../index'
-import { yamabiko } from '../yamabiko'
+import { manifest } from '../dynamicPwa.js'
+import { helloWorld } from '../index.js'
+import { yamabiko } from '../yamabiko.js'
 
 test('hello world', async () => {
   const req = mockReq()

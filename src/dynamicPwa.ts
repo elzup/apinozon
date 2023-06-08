@@ -1,4 +1,4 @@
-import { https } from './firebase'
+import { https } from './firebase.js'
 
 /* eslint-disable @typescript-eslint/naming-convention */
 

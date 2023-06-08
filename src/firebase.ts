@@ -33,7 +33,7 @@ const userConverter: admin.firestore.FirestoreDataConverter<User> = {
 export const getUserDoc = (uid: string) => {
   const app = admin.apps[0]
 
-  if (!app) return
+  if (app === null) return
 
   const db = app.firestore()
 

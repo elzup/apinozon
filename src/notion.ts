@@ -38,7 +38,7 @@ export const insert = async function (
       return null
     })
 
-  if (!res) return
+  if (res === null) return
 
   console.log(res.body)
 }

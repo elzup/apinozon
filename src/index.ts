@@ -1,9 +1,9 @@
 import * as functions from 'firebase-functions'
-import { ua } from './ua'
-import { manifest } from './dynamicPwa'
-import { fanOut, fanOutUnit } from './fanOut'
-import { https } from './firebase'
-import { timezoneJp, timezoneUs } from './timezone'
+import { ua } from './ua.js'
+import { manifest } from './dynamicPwa.js'
+import { fanOut, fanOutUnit } from './fanOut.js'
+import { https } from './firebase.js'
+import { timezoneJp, timezoneUs } from './timezone.js'
 
 export { manifest, fanOut, fanOutUnit, timezoneJp, timezoneUs, ua }
 

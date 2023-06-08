@@ -1,5 +1,5 @@
 import { PubSub } from '@google-cloud/pubsub'
-import { base, https } from './firebase'
+import { base, https } from './firebase.js'
 
 // const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 const FANOUT_UNIT_TOPIC_ID = 'fanout-unit'
