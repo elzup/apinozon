@@ -32,3 +32,22 @@ export const timeGacha = https.onRequest((req, res) => {
 
   res.send(timeGaha(new Date(t)))
 })
+
+export const paring = https.onRequest((req, res) => {
+  const { id } = req.query
+  const KEY_PAIRS = process.env.KEY_PAIRS || ''
+  if (typeof id !== 'string') {
+    res.end('id is not string')
+    return
+  }
+  const keys = new Map(
+    KEY_PAIRS.trim()
+      .split('\n')
+      .map((v) => v.split('\t'))
+      .map(([a, b]) => [a, b])
+  )
+  const key = keys.get(id)
+  const text = String(key)
+
+  res.end(text)
+})
