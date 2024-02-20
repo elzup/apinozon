@@ -51,3 +51,14 @@ export const paring = https.onRequest((req, res) => {
 
   res.end(text)
 })
+
+export const dump = https.onRequest((req, res) => {
+  info('method', req.method)
+  info('url', req.url)
+  info('query', req.query)
+  info('body', req.body)
+  info('headers', req.headers)
+  info('rawHeaders', req.rawHeaders)
+
+  res.end('dumped')
+})
