@@ -1,15 +1,13 @@
-import * as functions from 'firebase-functions'
-import { ua } from './ua.js'
+import { info, log } from 'firebase-functions/logger'
 import { manifest } from './dynamicPwa.js'
 import { fanOut, fanOutUnit } from './fanOut.js'
 import { https } from './firebase.js'
-import { timezoneJp, timezoneUs } from './timezone.js'
 import { timeGaha } from './gacha.js'
-import { log } from 'firebase-functions/logger'
+import { redirector } from './redirector.js'
+import { timezoneJp, timezoneUs } from './timezone.js'
+import { ua } from './ua.js'
 
-export { manifest, fanOut, fanOutUnit, timezoneJp, timezoneUs, ua }
-
-const { info } = functions.logger
+export { fanOut, fanOutUnit, manifest, redirector, timezoneJp, timezoneUs, ua }
 
 export const helloWorld = https.onRequest((req, res) => {
   info('Hello logs!', { structuredData: true })
