@@ -1,4 +1,4 @@
-import { https } from './firebase'
+import { https } from './firebase.js'
 
 export const redirector = https.onRequest((req, res) => {
   const url = req.query.url as string
