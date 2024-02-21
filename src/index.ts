@@ -5,6 +5,7 @@ import { fanOut, fanOutUnit } from './fanOut.js'
 import { https } from './firebase.js'
 import { timezoneJp, timezoneUs } from './timezone.js'
 import { timeGaha } from './gacha.js'
+import { log } from 'firebase-functions/logger'
 
 export { manifest, fanOut, fanOutUnit, timezoneJp, timezoneUs, ua }
 
@@ -53,12 +54,8 @@ export const paring = https.onRequest((req, res) => {
 })
 
 export const dump = https.onRequest((req, res) => {
-  info('method', req.method)
-  info('url', req.url)
-  info('query', req.query)
-  info('body', req.body)
-  info('headers', req.headers)
-  info('rawHeaders', req.rawHeaders)
+  info(`summary ${req.method} ${req.url}`)
+  log(req)
 
   res.end('dumped')
 })
