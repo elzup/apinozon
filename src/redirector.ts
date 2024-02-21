@@ -1,7 +1,9 @@
+import { log } from 'firebase-functions/logger'
 import { https } from './firebase.js'
 
 export const redirector = https.onRequest((req, res) => {
   const url = req.query.url as string
+  log('redirector', { url })
   if (typeof url !== 'string') {
     res.status(400).send('url is not string')
     return
