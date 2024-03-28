@@ -6,9 +6,18 @@ import { timeGaha } from './gacha.js'
 import { redirector } from './redirector.js'
 import { timezoneJp, timezoneUs } from './timezone.js'
 import { ua } from './ua.js'
-import { delay } from './dump.js'
+import { delay } from './delay.js'
 
-export { fanOut, fanOutUnit, manifest, redirector, timezoneJp, timezoneUs, ua, delay }
+export {
+  fanOut,
+  fanOutUnit,
+  manifest,
+  redirector,
+  timezoneJp,
+  timezoneUs,
+  ua,
+  delay,
+}
 
 export const helloWorld = https.onRequest((req, res) => {
   info('Hello logs!', { structuredData: true })
