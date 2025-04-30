@@ -17,7 +17,7 @@
   "main": "lib/index.js",
   "dependencies": {
     "@elzup/kit": "4.5.0",
-    "@google-cloud/pubsub": "3.7.5",
+    "@google-cloud/pubsub": "5.0.0",
     "firebase-admin": "11.11.1",
     "firebase-functions": "4.9.0"
   },
